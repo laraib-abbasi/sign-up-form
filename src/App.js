@@ -16,8 +16,20 @@ const Form = () => {
 
   const validateForm = () => {
     const newErrors = {};
+    const nameVal = /^[a-zA-Z\s]+$/;
 
-    if (!formData.firstName) newErrors.firstName = "First name is required.";
+    if (!formData.firstName) {
+      newErrors.firstName = "First name is required.";
+    } else if (!nameVal.test(formData.firstName)) {
+      newErrors.firstName = "First name cannot contain numbers or special characters.";
+    }
+
+    if (!formData.lastName) {
+      newErrors.lastName = "Last name is required.";
+    } else if (!nameVal.test(formData.lastName)) {
+      newErrors.lastName = "Last name cannot contain numbers or special characters.";
+    }
+
     if (!formData.lastName) newErrors.lastName = "Last name is required.";
     if (!formData.email.includes("@")) newErrors.email = "Invalid email address.";
     if (formData.password.length < 6) newErrors.password = "Password must be at least 6 characters.";
