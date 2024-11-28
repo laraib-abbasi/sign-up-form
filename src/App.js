@@ -48,8 +48,8 @@ const Form = () => {
   };
 
   return (
-    <div className="bg-[#f5f5f5] min-h-screen flex justify-center items-center grid p-6">
-      <h1 className="flex justify-center items-center text-4xl font-bold text-center text-[#001F3F] mb-2 ">BAV-IT</h1>
+    <div className="bg-[#f5f5f5] min-h-screen flex justify-center items-center grid p-6 ">
+      <h1 className="flex justify-center items-center text-4xl font-bold text-center text-[#001F3F] mb-2 pb-0 ">BAV-IT</h1>
       <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl ">
         
         <h2 className="text-lg text-center font-semibold text-[#1F509A] mb-1">Create New Account</h2>
@@ -182,10 +182,10 @@ const Form = () => {
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.confirmPassword ? "border-red-500" : "border-gray-300"
                 } focus:outline-none focus:ring-1 focus:ring-blue-900 focus:border-none placeholder-transparent`}
-                placeholder="Confirm Password"
+                placeholder=".."
               />
               <label 
-                 for="lastName" 
+                 for="confirmPassword" 
                  class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-blue-900  peer-placeholder-shown:bg-transparent
                  peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-lg peer-placeholder-shown:top-2.5
                  peer-focus:-top-2.5
