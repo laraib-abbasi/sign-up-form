@@ -2,12 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-::placeholder[type="text"]:focus~.focus-input{
-    @apply text-rose-700 bg-rose-100 rounded-lg transform px-2 -translate-y-6 -translate-x-2 text-sm;
-}
-input[type="email"]:focus~.focus-input{
-    @apply text-rose-700 bg-rose-100 rounded-lg transform px-2 -translate-y-6 -translate-x-2 text-sm;
-}
-input[type="password"]:focus~.focus-input{
-    @apply text-rose-700 bg-rose-100 rounded-lg transform px-2 -translate-y-6 -translate-x-2 text-sm; 
-}
