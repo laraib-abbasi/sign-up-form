@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import DarkMode from './darkMode';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
+<>
     <div>
       <nav className="bg-primBg font-anta text-primary w-full p-2 flex items-center justify-between shadow-md">
         {/* Logo */}
@@ -50,6 +52,7 @@ const Navbar = () => {
             <a href="/login">Login</a>
           </li>
         </ul>
+        <DarkMode/>
       </nav>
 
       {/* Mobile Navigation  */}
@@ -69,12 +72,17 @@ const Navbar = () => {
               <a href="/login">Login</a>
             </li>
           </ul>
+          
         </div>
+        
+        
+        
       )}
 
-      
       <hr className="border-blue-950 border-t-2 p-0"></hr>
+
     </div>
+    </>
   )
 }
 

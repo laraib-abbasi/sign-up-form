@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode:'class' ,
   content: ['./src/**/*.{html,js,jsx}'], // Ensure paths are correct
   theme: {
     extend: {

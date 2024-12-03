@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import DarkMode from "./darkMode";
 
 
 const Form = () => {
@@ -55,11 +56,13 @@ const Form = () => {
   };
 
   return (
-    <div className="bg-primBg min-h-screen flex justify-center items-center grid p-6 ">
+
+
+    <div className="bg-primBg min-h-screen flex justify-center items-center grid p-6 dark:bg-bavit ">
       {/* <h1 className="flex justify-center  items-center text-4xl font-bold text-center text-[#001F3F] mb-2 pb-0 ">BAV-IT</h1> */}
-      <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl ">
+      <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl dark:bg-primary ">
         
-        <h2 className="text-lg text-center font-semibold text-primary mb-1">Create New Account</h2>
+        <h2 className="text-lg text-center font-semibold text-primary mb-1  ">Create New Account</h2>
         <h1 className="text-center text-gray-500 text-sm mt-0 pt-0 mb-8">Get your free BAV-IT account now </h1>
         <form onSubmit={handleSubmit}>
           <div className="grid sm:grid-cols-2 gap-4 mb-4">

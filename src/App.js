@@ -1,14 +1,31 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider,Outlet,useLocation } from 'react-router-dom'
 import Form from './component/signup'
 import Login from './component/login'
 import ForgotPass from './component/forgotPass'
 import Profile from './component/profile'
 import Navbar from './component/navbar'
-import DarkMode from './component/darkMode'
 import { useState } from 'react'
+
+const Layout = () => {
+  const location = useLocation();
+
+  // Determine if the Navbar should be shown
+  const showNavbar = location.pathname !== '/login';
+
+  return (
+    <>
+      {showNavbar && <Navbar />}
+      
+      <Outlet />
+    </>
+  );
+};
 
 const App = () => {
   const router=createBrowserRouter([
+    {path: '/',
+    element: <Layout />, // Apply the Layout wrapper
+    children: [
     {
       path:"/login",
       element:<Login/>
@@ -29,11 +46,10 @@ const App = () => {
       path:"/navbar",
       element:<Navbar/>
     },
-    {
-      path:"/dark",
-      element:<DarkMode/>
-    }
+  ],
+},
 
+{path:'/login', element:<Login/>}
 
   ])
 
@@ -41,8 +57,9 @@ const App = () => {
 
   return (
     <>
-
+    
     <RouterProvider router={router}/>
+    
 </>
   )
 }
