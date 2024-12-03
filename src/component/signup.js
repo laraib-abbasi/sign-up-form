@@ -1,6 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const Form = () => {
+  const navigate=useNavigate();
+  const signUpButton=()=>{
+    navigate("/login")
+  }
   
   const [formData, setFormData] = useState({
     firstName: "",
@@ -49,11 +55,11 @@ const Form = () => {
   };
 
   return (
-    <div className="bg-[#f5f5f5] min-h-screen flex justify-center items-center grid p-6 ">
-      <h1 className="flex justify-center  items-center text-4xl font-bold text-center text-[#001F3F] mb-2 pb-0 ">BAV-IT</h1>
+    <div className="bg-primBg min-h-screen flex justify-center items-center grid p-6 ">
+      {/* <h1 className="flex justify-center  items-center text-4xl font-bold text-center text-[#001F3F] mb-2 pb-0 ">BAV-IT</h1> */}
       <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl ">
         
-        <h2 className="text-lg text-center font-semibold text-[#1F509A] mb-1">Create New Account</h2>
+        <h2 className="text-lg text-center font-semibold text-primary mb-1">Create New Account</h2>
         <h1 className="text-center text-gray-500 text-sm mt-0 pt-0 mb-8">Get your free BAV-IT account now </h1>
         <form onSubmit={handleSubmit}>
           <div className="grid sm:grid-cols-2 gap-4 mb-4">
@@ -66,12 +72,12 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.firstName ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-blue-900 focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent`}
                 placeholder="First Name"
               />
               <label 
                  for="firstName" 
-                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-blue-900  peer-placeholder-shown:bg-transparent
+                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-primary  peer-placeholder-shown:bg-transparent
                  peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-lg peer-placeholder-shown:top-2.5
                  peer-focus:-top-2.5
                  peer-focus:text-sm
@@ -96,12 +102,12 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.lastName ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-blue-900 focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent`}
                 placeholder="Last name"
               />
               <label 
                  for="lastName" 
-                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-blue-900  peer-placeholder-shown:bg-transparent
+                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-primary  peer-placeholder-shown:bg-transparent
                  peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-lg peer-placeholder-shown:top-2.5
                  peer-focus:-top-2.5
                  peer-focus:text-sm
@@ -125,12 +131,12 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.email ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-blue-900 focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent`}
                 placeholder="Email Address"
               />
               <label 
                  for="email" 
-                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-blue-900  peer-placeholder-shown:bg-transparent
+                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-primary  peer-placeholder-shown:bg-transparent
                  peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-lg peer-placeholder-shown:top-2.5
                  peer-focus:-top-2.5
                  peer-focus:text-sm
@@ -154,12 +160,12 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.password ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-blue-900 focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary  focus:border-none placeholder-transparent`}
                 placeholder="Password"
               />
               <label 
                  for="password" 
-                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-blue-900  peer-placeholder-shown:bg-transparent
+                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-primary   peer-placeholder-shown:bg-transparent
                  peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-lg peer-placeholder-shown:top-2.5
                  peer-focus:-top-2.5
                  peer-focus:text-sm
@@ -182,12 +188,12 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.confirmPassword ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-blue-900 focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary  focus:border-none placeholder-transparent`}
                 placeholder=".."
               />
               <label 
                  for="confirmPassword" 
-                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-blue-900  peer-placeholder-shown:bg-transparent
+                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-primary   peer-placeholder-shown:bg-transparent
                  peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-lg peer-placeholder-shown:top-2.5
                  peer-focus:-top-2.5
                  peer-focus:text-sm
@@ -206,14 +212,15 @@ const Form = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-teal-600 text-white font-bold p-3 rounded-lg hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-rose-400 transition duration-300"
+            onClick={signUpButton}
+            className="w-full bg-btnbg text-white font-bold p-3 rounded-lg hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-rose-400 transition duration-300"
           >
             Sign Up
           </button>
         </form>
       </div>
-      <div className="flex items-start justify-center mt-0 pt-0">
-        <p className=" ">Already have an account? <a href="/login" className="text-blue-600">Login</a></p>
+      <div className="flex items-start justify-center h-20">
+        <p className="">Already have an account? <a href="/login" className="text-secondary">Login</a></p>
       </div>
     </div>
   );
