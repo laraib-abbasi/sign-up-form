@@ -58,9 +58,9 @@ const Form = () => {
   return (
 
 
-    <div className="bg-primBg min-h-screen flex justify-center items-center grid p-6 dark:bg-bavit ">
+    <div className="bg-primBg min-h-screen flex justify-center items-center grid p-6 dark:bg-slate-950 ">
       {/* <h1 className="flex justify-center  items-center text-4xl font-bold text-center text-[#001F3F] mb-2 pb-0 ">BAV-IT</h1> */}
-      <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl dark:bg-primary ">
+      <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl dark:bg-slate-800 ">
         
         <h2 className="text-lg text-center font-semibold text-primary mb-1  ">Create New Account</h2>
         <h1 className="text-center text-gray-500 text-sm mt-0 pt-0 mb-8">Get your free BAV-IT account now </h1>
@@ -75,12 +75,13 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.firstName ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent
+                bg-transparent`}
                 placeholder="First Name"
               />
               <label 
                  for="firstName" 
-                 class="absolute -top-2.5 bg-white px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-primary  peer-placeholder-shown:bg-transparent
+                 class="absolute -top-2.5   px-1 left-2 text-sm transition-all duration-200 text-gray-500 peer-focus:text-primary  peer-placeholder-shown:bg-transparent
                  peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-lg peer-placeholder-shown:top-2.5
                  peer-focus:-top-2.5
                  peer-focus:text-sm
@@ -105,7 +106,8 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.lastName ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent
+                bg-transparent`}
                 placeholder="Last name"
               />
               <label 
@@ -134,7 +136,8 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.email ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent
+                bg-transparent`}
                 placeholder="Email Address"
               />
               <label 
@@ -163,7 +166,8 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.password ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-primary  focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary  focus:border-none placeholder-transparent
+                bg-transparent`}
                 placeholder="Password"
               />
               <label 
@@ -191,7 +195,7 @@ const Form = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.confirmPassword ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-primary  focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary  focus:border-none placeholder-transparent bg-transparent`}
                 placeholder=".."
               />
               <label 
@@ -223,7 +227,7 @@ const Form = () => {
         </form>
       </div>
       <div className="flex items-start justify-center h-20">
-        <p className="">Already have an account? <a href="/login" className="text-secondary">Login</a></p>
+        <p className="dark:text-slate-300">Already have an account? <a href="/login" className="text-secondary">Login</a></p>
       </div>
     </div>
   );

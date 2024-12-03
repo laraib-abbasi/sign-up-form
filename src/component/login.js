@@ -51,7 +51,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-[#f5f5f5] min-h-screen flex justify-center items-center grid p-6 ">
+    <div className="bg-[#f5f5f5] min-h-screen flex justify-center items-center grid p-6 dark:bg-slate-950">
       {/* <h1 className="flex justify-center  items-center text-4xl font-bold text-center text-[#001F3F] mb-2 pb-0 ">BAV-IT</h1> */}
       <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl ">
         

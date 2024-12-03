@@ -7,10 +7,10 @@ const Navbar = () => {
   return (
 <>
     <div>
-      <nav className="bg-primBg font-anta text-primary w-full p-2 flex items-center justify-between shadow-md">
+      <nav className="bg-primBg font-anta text-primary w-full p-2 flex items-center justify-between shadow-md dark:bg-slate-950 dark:text-slate-400">
         {/* Logo */}
         <div>
-          <span className="text-2xl sm:text-4xl mx-4 font-bold text-bavit">BAV-IT</span>
+          <span className="text-2xl sm:text-4xl mx-4 font-bold text-bavit dark:text-gray-200" >BAV-IT</span>
         </div>
 
         {/* Hamburger Menu (Mobile View) */}
@@ -37,7 +37,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links (Desktop View) */}
-        <ul className="hidden sm:flex items-center sm:mx-4 sm:font-bold sm:text-lg text-xs">
+        <ul className="hidden sm:flex items-center sm:mx-4 sm:font-bold sm:text-lg text-xs ">
           <li className="mx-3">
             <a href="/">Home</a>
           </li>

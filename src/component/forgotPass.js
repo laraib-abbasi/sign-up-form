@@ -40,9 +40,8 @@ const ForgotPass = () => {
   };
 
   return (
-    <div className="bg-[#f5f5f5] min-h-screen flex justify-center items-center grid p-6 ">
-      <h1 className="flex justify-center  items-center text-4xl font-bold text-center text-[#001F3F] mb-2 pb-0 ">BAV-IT</h1>
-      <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl ">
+    <div className="bg-[#f5f5f5] min-h-screen flex justify-center items-center grid p-6 dark:bg-slate-950 ">
+      <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl dark:bg-slate-800 ">
         
         <h2 className="text-lg text-center font-semibold text-primary mb-12">Reset your password</h2>
         
@@ -58,7 +57,8 @@ const ForgotPass = () => {
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.newPassword ? "border-red-500" : "border-gray-300"
                 } focus:outline-none focus:ring-1 
-                focus:ring-primary focus:border-none placeholder-transparent`}
+                focus:ring-primary focus:border-none placeholder-transparent
+                bg-transparent`}
                 placeholder="newPassword"
               />
               <label 
@@ -87,7 +87,8 @@ const ForgotPass = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.password ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent
+                bg-transparent`}
                 placeholder="Password"
               />
               <label 
