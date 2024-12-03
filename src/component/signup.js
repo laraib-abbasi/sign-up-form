@@ -30,7 +30,7 @@ const Form = () => {
       newErrors.firstName = "First name is required.";
     } else if (!nameVal.test(formData.firstName)) {
       newErrors.firstName = "First name cannot contain numbers or special characters.";
-    }
+    } 
 
     if (!formData.lastName) {
       newErrors.lastName = "Last name is required.";
