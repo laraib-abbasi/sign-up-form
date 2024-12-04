@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./navbar";
+import DarkMode from "./darkMode";
 
 const Login = () => {
 
@@ -51,9 +53,11 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-[#f5f5f5] min-h-screen flex justify-center items-center grid p-6 dark:bg-slate-950">
-      {/* <h1 className="flex justify-center  items-center text-4xl font-bold text-center text-[#001F3F] mb-2 pb-0 ">BAV-IT</h1> */}
-      <div className="bg-white w-full max-w-lg p-8 rounded-3xl shadow-2xl ">
+    <div className="bg-primBg  min-h-screen flex justify-center items-center grid p-6 dark:bg-dark-primBg">
+      <div className="flex justify-end">
+      <DarkMode/></div>
+       <h1 className="flex justify-center  items-center text-4xl font-bold text-center text-bavit dark:text-dark-bavit font-bavit mb-2 pb-0 ">BAV-IT</h1> 
+      <div className="bg-formBg dark:bg-dark-formBg w-full max-w-lg p-8 rounded-3xl shadow-2xl ">
         
         <h2 className="text-lg text-center font-semibold text-primary mb-12">Log in to your account</h2>
         
@@ -69,7 +73,8 @@ const Login = () => {
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.email ? "border-red-500" : "border-gray-300"
                 } focus:outline-none focus:ring-1 
-                focus:ring-primary focus:border-none placeholder-transparent`}
+                focus:ring-primary focus:border-none placeholder-transparent
+                bg-transparent`}
                 placeholder="Email Address"
               />
               <label 
@@ -79,7 +84,7 @@ const Login = () => {
                  peer-focus:-top-2.5
                  peer-focus:text-sm
                  transition-all duration-200
-                 peer-focus:bg-white
+                 peer-focus:bg-white dark:peer-focus:bg-dark-formBg
                  "
               >
                 Email Address
@@ -98,7 +103,8 @@ const Login = () => {
                 onChange={handleChange}
                 className={`peer w-full p-3 rounded-sm border ${
                   errors.password ? "border-red-500" : "border-gray-300"
-                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent`}
+                } focus:outline-none focus:ring-1 focus:ring-primary focus:border-none placeholder-transparent
+                bg-transparent`}
                 placeholder="Password"
               />
               <label 
@@ -109,6 +115,7 @@ const Login = () => {
                  peer-focus:text-sm
                  transition-all duration-200
                  peer-focus:bg-white
+                 dark:peer-focus:bg-dark-formBg
                  "
               >
                 Password
@@ -130,7 +137,7 @@ const Login = () => {
         </form>
       </div>
       <div className="flex  justify-center   ">
-        <p className="">Don't have an account? <a href="/" className="text-secondary hover:text-primary">Sign Up</a></p>
+        <p className="dark:text-dark-bavit">Don't have an account? <a href="/" className="text-secondary  hover:text-primary">Sign Up</a></p>
       </div>
     </div>
   );

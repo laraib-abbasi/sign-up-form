@@ -7,17 +7,17 @@ const Navbar = () => {
   return (
 <>
     <div>
-      <nav className="bg-primBg font-anta text-primary w-full p-2 flex items-center justify-between shadow-md dark:bg-slate-950 dark:text-slate-400">
+      <nav className="bg-primBg dark:bg-dark-primBg font-bavit text-primary w-full p-2 flex items-center shadow-md justify-between ">
         {/* Logo */}
         <div>
-          <span className="text-2xl sm:text-4xl mx-4 font-bold text-bavit dark:text-gray-200" >BAV-IT</span>
+          <span className="text-2xl sm:text-4xl mx-4 font-bold text-bavit dark:text-dark-bavit" >BAV-IT</span>
         </div>
 
         {/* Hamburger Menu (Mobile View) */}
-        <div className="sm:hidden">
+        <div className="sm:hidden flex justify-end ">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-blue-950 focus:outline-none"
+            className=" focus:outline-none"
           >
             <svg
               className="w-6 h-6"
@@ -34,8 +34,11 @@ const Navbar = () => {
               ></path>
             </svg>
           </button>
+          <DarkMode/>
         </div>
 
+       
+        
         {/* Navigation Links (Desktop View) */}
         <ul className="hidden sm:flex items-center sm:mx-4 sm:font-bold sm:text-lg text-xs ">
           <li className="mx-3">
@@ -51,13 +54,17 @@ const Navbar = () => {
           <li className="mx-3">
             <a href="/login">Login</a>
           </li>
+          <li><DarkMode/></li>
         </ul>
-        <DarkMode/>
+        
+        
       </nav>
 
       {/* Mobile Navigation  */}
       {isOpen && (
-        <div className="sm:hidden bg-white shadow-md">
+        <>
+        <DarkMode/>
+        <div className="sm:hidden bg-primBg dark:bg-dark-formBg shadow-md text-secondary">
           <ul className="flex flex-col items-start px-4 py-2 space-y-2">
             <li>
               <a href="/">Home</a>
@@ -74,7 +81,8 @@ const Navbar = () => {
           </ul>
           
         </div>
-        
+       
+        </>
         
         
       )}

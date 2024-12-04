@@ -9,7 +9,7 @@ const Profile = () => {
   }
   return (
     <>
-    <div className='dark:bg-slate-950 dark:text-slate-300'>
+    <div className='dark:bg-dark-primBg dark:text-dark-bavit'>
     <button onClick={logoutBtn}
     className='bg-btnbg p-1 px-4 text-white font-semibold m-6 rounded-lg'>
       <a href='/signup'>Log out</a>

@@ -68,7 +68,7 @@ const ForgotPass = () => {
                  peer-focus:-top-2.5
                  peer-focus:text-sm
                  transition-all duration-200
-                 peer-focus:bg-white
+                 peer-focus:bg-white dark:peer-focus:bg-dark-formBg
                  "
               >
                 New Password 
@@ -98,7 +98,7 @@ const ForgotPass = () => {
                  peer-focus:-top-2.5
                  peer-focus:text-sm
                  transition-all duration-200
-                 peer-focus:bg-white
+                 peer-focus:bg-white dark:peer-focus:bg-dark-formBg
                  "
               >
                 Confirm Password

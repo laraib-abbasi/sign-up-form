@@ -86,7 +86,7 @@ const Form = () => {
                  peer-focus:-top-2.5
                  peer-focus:text-sm
                  transition-all duration-200
-                 peer-focus:bg-white
+                 peer-focus:bg-white dark:peer-focus:bg-dark-formBg
                  "
               >
                 First Name
@@ -117,7 +117,7 @@ const Form = () => {
                  peer-focus:-top-2.5
                  peer-focus:text-sm
                  transition-all duration-200
-                 peer-focus:bg-white
+                 peer-focus:bg-white dark:peer-focus:bg-dark-formBg
                  "
               >
                 Last Name
@@ -147,7 +147,7 @@ const Form = () => {
                  peer-focus:-top-2.5
                  peer-focus:text-sm
                  transition-all duration-200
-                 peer-focus:bg-white
+                 peer-focus:bg-white dark:peer-focus:bg-dark-formBg
                  "
               >
                 Email Address
@@ -177,7 +177,7 @@ const Form = () => {
                  peer-focus:-top-2.5
                  peer-focus:text-sm
                  transition-all duration-200
-                 peer-focus:bg-white
+                 peer-focus:bg-white dark:peer-focus:bg-dark-formBg
                  "
               >
                 Password
@@ -205,7 +205,7 @@ const Form = () => {
                  peer-focus:-top-2.5
                  peer-focus:text-sm
                  transition-all duration-200
-                 peer-focus:bg-white
+                 peer-focus:bg-white dark:peer-focus:bg-dark-formBg
                  "
               >
                 Confirm Password
@@ -227,7 +227,7 @@ const Form = () => {
         </form>
       </div>
       <div className="flex items-start justify-center h-20">
-        <p className="dark:text-slate-300">Already have an account? <a href="/login" className="text-secondary">Login</a></p>
+        <p className="dark:text-slate-300">Already have an account? <a href="/login" className="text-secondary dark:text-secondary">Login</a></p>
       </div>
     </div>
   );
